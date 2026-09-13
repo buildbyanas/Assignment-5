@@ -6,7 +6,7 @@ It allows developers to explore different technologies, add them to their own st
 
 ## ✨ Features
 
-- 📱 Fully responsive design
+- 📱 Fully responsive design for mobile and other divices
 - 🧩 Browse technologies by category
 - ➕ Add technologies to your stack
 - ❌ Remove individual technologies
