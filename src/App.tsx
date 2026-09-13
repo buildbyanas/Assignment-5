@@ -3,7 +3,7 @@ import Banner from "./Banner";
 import Nav from "./nav";
 import Technologies from "./technologies";
 import type { ITech } from "./Types/techtype";
-
+import Footer from "./footer";
 
 const techFetch = async (): Promise<ITech[]> => {
   const res = await fetch("/data.json");
@@ -27,6 +27,7 @@ function App() {
       <Suspense fallback={<p>Loading...</p>}>
         <Technologies techPromise={techPromise} />
       </Suspense>
+      <Footer></Footer>
     </>
   );
 }
