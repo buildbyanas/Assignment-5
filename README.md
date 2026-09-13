@@ -1,78 +1,55 @@
-# React + TypeScript + Vite
+# DevStack 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+DevStack is a responsive technology stack builder built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+It allows developers to explore different technologies, add them to their own stack, and remove them whenever needed.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 📱 Fully responsive design
+- 🧩 Browse technologies by category
+- ➕ Add technologies to your stack
+- ❌ Remove individual technologies
+- 🗑️ Remove all selected technologies
+- 🔒 Disable the "Add to Stack" button after adding
+- 🔔 Toast notifications when a technology is added
+- 📌 Sticky navigation bar
+- 📌 Sticky "Your Stack" sidebar on desktop
+- ⚡ Technology data loaded from `data.json`
+- 🎨 Modern UI built with Tailwind CSS
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 🛠️ Technologies Used
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+- React
+- TypeScript
+- Tailwind CSS
+- React Toastify
+- Vite
+- JSON
 
-## Expanding the ESLint configuration
+## 📂 Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```text
+src/
+├── components/
+│   ├── TechnologyCard.tsx
+│   └── StackSidebar.tsx
+├── Types/
+│   └── techtype.ts
+├── App.tsx
+├── Banner.tsx
+├── Footer.tsx
+├── Nav.tsx
+└── Technologies.tsx
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+public/
+└── data.json
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+1) JSX: JSX lets us write HTML-like code inside JavaScript to build React UI.
+2) Props vs State: Props are data passed from parent to child, while state is data managed inside a component.
+3) useState: useState stores changing data, and we used it to store the selected technologies in the stack.
+4) useEffect: useEffect runs code after rendering, and it can be used to fetch and load our JSON data.
+5) ey: A unique key helps React identify each item in a list and update it efficiently.
+6) Conditional rendering: It means showing different UI based on a condition, like showing "No technologies selected" when the stack is empty.
+7) Parent ↔ Child: A parent sends data through props, and a child sends information back by calling a function passed through props.
