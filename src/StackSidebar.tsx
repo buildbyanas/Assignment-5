@@ -21,7 +21,7 @@ const StackSidebar = ({
         {selectedTech.length === 0 ? (
           <div className="rounded-xl border border-slate-200 px-4 py-8 text-center">
             <p className="text-sm text-slate-400">
-              Your Stack is empty
+              Your Stack is empty.
             </p>
           </div>) : (
           selectedTech.map((technology) => (

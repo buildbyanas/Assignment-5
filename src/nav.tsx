@@ -1,16 +1,16 @@
-
+import humburg from "./ui/hamburger.png"
 import logo from "./assets/logo-text.png";
 const Nav = () => {
   return (
     <div className="sticky top-0 z-50 bg-white shadow-md">
   <nav className="container mx-auto flex flex-wrap items-center justify-between gap-4 p-4 md:px-8">
-
+      <img src= {humburg} alt="humburg" className="md:hidden" />
     <img
       src={logo}
       alt="DevStack Logo"
-      className="w-auto"
+      className="w-auto items-center"
     />
-    <ul className="flex flex-wrap justify-center gap-4 text-base md:gap-6 md:text-lg">
+    <ul className="hidden md:flex flex-wrap justify-center gap-4 text-base md:gap-6 md:text-lg">
       <li><a href="#" className="text-gray-700">Home</a>
       </li>
       <li><a href="#" className="text-gray-700">Technologies</a>

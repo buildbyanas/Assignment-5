@@ -3,14 +3,21 @@ import type { ITech } from "./Types/techtype";
 interface TechnologyCardProps {
   technology: ITech;
   onAdd: (technology: ITech) => void;
+  isSelected: boolean;
 }
 
 const TechnologyCard = ({
   technology,
   onAdd,
+  isSelected,
 }: TechnologyCardProps) => {
   return (
-    <div className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+    <div className={`rounded-xl bg-white p-5 shadow-sm transition ${
+    isSelected
+      ? "border-2 border-fuchsia-600 hover:-translate-y-1 hover:shadow-md"
+      : "border border-transparent flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+  }`}
+  >
 
       <div className="flex items-start justify-between">
         <img
@@ -49,11 +56,12 @@ const TechnologyCard = ({
       </div>
 
       <button
-        onClick={() => onAdd(technology)}
-        className="mt-4 w-full rounded-lg bg-slate-950 py-3 text-sm font-medium text-white transition hover:bg-slate-800"
-      >
-        Add to Stack
-      </button>
+  onClick={() => onAdd(technology)}
+  disabled={isSelected}
+  className="mt-4 w-full rounded-lg bg-slate-950 py-3 text-sm font-medium text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:bg-white disabled:border-2 disabled:border-fuchsia-600 disabled:text-gray-500"
+>
+  {isSelected ? " ✓ Added to Stack" : "Add to Stack"}
+</button>
 
     </div>
   );

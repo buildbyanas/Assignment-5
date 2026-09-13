@@ -1,7 +1,7 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import Banner from "./Banner";
 import Nav from "./nav";
-import Technologies from "./technologies";
+import Technologies from "./Technologies";
 import type { ITech } from "./Types/techtype";
 import Footer from "./footer";
 import { ToastContainer } from "react-toastify";
@@ -17,17 +17,16 @@ const techFetch = async (): Promise<ITech[]> => {
   return res.json();
 };
 
-// Keep the promise outside App
-const techPromise = techFetch();
+
 
 function App() {
+  const [techPromise] = useState(()=> techFetch());
   return (
     <>
       <Nav />
       <Banner />
-
       <Suspense fallback={<p>Loading...</p>}>
-        <Technologies techPromise={techPromise} />
+        <Technologies techPromise={techPromise} isSelected={false} />
       </Suspense>
       <Footer></Footer>
        <ToastContainer position="bottom-right"
