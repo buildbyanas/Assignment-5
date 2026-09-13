@@ -4,6 +4,8 @@ import Nav from "./nav";
 import Technologies from "./technologies";
 import type { ITech } from "./Types/techtype";
 import Footer from "./footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const techFetch = async (): Promise<ITech[]> => {
   const res = await fetch("/data.json");
@@ -28,6 +30,9 @@ function App() {
         <Technologies techPromise={techPromise} />
       </Suspense>
       <Footer></Footer>
+       <ToastContainer position="bottom-right"
+        autoClose={2000}
+        theme="light"/>
     </>
   );
 }
