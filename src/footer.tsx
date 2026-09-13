@@ -16,23 +16,23 @@ const Footer = () => {
             <p className="mt-4 max-w-md text-sm leading-6 text-slate-500"> Curated tools, technologies, and resources for developersbuilding modern software.</p>
 
             <div className="mt-5 flex gap-5 text-sm">
-              <a href="#" className="text-slate-700 transition hover:text-pink-600"> GitHub</a>
+              <a href="#" className="text-slate-700 transition "> GitHub</a>
 
-              <a href="#" className="text-slate-700 transition hover:text-pink-600">Twitter</a>
-              <a href="#" className="text-slate-700 transition hover:text-pink-600">LinkedIn </a>
+              <a href="#" className="text-slate-700 transition ">Twitter</a>
+              <a href="#" className="text-slate-700 transition">LinkedIn </a>
             </div>
           </div>
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-900">Product</h3>
             <ul className="mt-4 space-y-3 text-sm text-slate-500">
               <li>
-                <a href="#" className="hover:text-pink-600"> Home</a>
+                <a href="#" > Home</a>
               </li>
               <li>
-                <a href="#" className="hover:text-pink-600"> Technologies</a>
+                <a href="#" > Technologies</a>
               </li>
               <li>
-                <a href="#" className="hover:text-pink-600">Projects</a>
+                <a href="#">Projects</a>
               </li>
             </ul>
           </div>
@@ -43,28 +43,23 @@ const Footer = () => {
             </h3>
             <ul className="mt-4 space-y-3 text-sm text-slate-500">
               <li>
-                <a href="#" className="hover:text-pink-600"> About </a>
+                <a href="#" > About </a>
               </li>
               <li>
-                <a href="#" className="hover:text-pink-600">Contact</a>
+                <a href="#" >Contact</a>
               </li>
               <li>
-                <a href="#" className="hover:text-pink-600">Careers</a>
+                <a href="#" >Careers</a>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Divider */}
         <div className="mt-12 border-t border-slate-200 pt-7">
 
           <div className="flex flex-col gap-4 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
 
             <p>© 2026 Dev Stack. All rights reserved.</p>
-            <div className="flex gap-6">
-              <a href="#" className="hover:text-pink-600"> Privacy</a>
-              <a href="#" className="hover:text-pink-600">Terms</a>
-            </div>
 
           </div>
 
