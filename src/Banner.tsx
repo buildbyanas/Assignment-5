@@ -1,9 +1,10 @@
 import img from "./assets/banner-stack.png"
 const Banner = () => {
     return (
-        <div className="container mx-auto grid md:grid-cols-2 items-center gap-10">
+      <section className="bg-white">
+        <div className="container mx-auto grid md:grid-cols-2 items-center gap-10 ">
   <div>
-    <h1 className="lg:text-7xl text-4xl md:text-left text-center mt-16 font-bold leading-tight">
+    <h1 className="lg:text-7xl text-4xl md:text-left text-center mt-16 text-black font-bold leading-tight">
       Build Your Ideal <br />
       <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent">
         Development Stack
@@ -23,17 +24,16 @@ const Banner = () => {
         Explore Technologies
       </button>
 
-      <button className="rounded-xl border border-gray-300 px-6 py-3 font-medium">
+      <button className="rounded-xl border border-gray-300 text-black px-6 py-3 font-medium">
         Learn More
       </button>
     </div>
   </div>
-
-  {/* Right side */}
   <div className="flex justify-center">
     <img src={img} alt="Development stack" className="w-full max-w-lg" />
   </div>
 </div>
+</section>
     );
 };
 

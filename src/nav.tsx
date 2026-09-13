@@ -23,7 +23,7 @@ const Nav = () => {
       </li>
     </ul>
 
-    <div className="flex flex-wrap justify-center gap-5 md:justify-end">
+    <div className="flex flex-wrap justify-center text-gray-700 gap-5 md:justify-end">
       <button>Sign In</button>
 
       <button className="rounded-full bg-pink-600 px-4 py-2 text-white hover:bg-pink-700">

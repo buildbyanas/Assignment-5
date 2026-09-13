@@ -51,7 +51,7 @@ const handleRemoveAll = () => {
       <div className="container mx-auto px-4">
 
         <div>
-        <h1 className="text-3xl md:text-4xl font-bold mt-20 text-center md:text-left">Explore The <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent">Technologies</span></h1>
+        <h1 className="text-3xl md:text-4xl font-bold mt-20 text-center text-black md:text-left">Explore The <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent">Technologies</span></h1>
         <p className="mb-10 text-xl md:text-2xl text-center md:text-left text-gray-600 leading-relaxed">Pick one technology per category to build your ideal stack.</p>
       </div>
 
